@@ -6,12 +6,12 @@ import App from './App';
 const container = document.getElementById('root');
 
 if (!container) {
-  throw new Error("Could not find root element to mount to");
+  console.error("Failed to find the root element");
+} else {
+  const root = createRoot(container);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
 }
-
-const root = createRoot(container);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
