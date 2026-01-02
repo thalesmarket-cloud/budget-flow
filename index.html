@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetFlow - Marketing Budget Architect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React Flow Basic Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow@11.10.4/dist/style.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #root {
+      width: 100vw;
+      height: 100vh;
+    }
+    /* Pattern background matching the user screenshot */
+    .bg-dots-pattern {
+      background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      background-color: #f8fafc;
+    }
+    .dark .bg-dots-pattern {
+      background-image: radial-gradient(#374151 1.5px, transparent 1.5px);
+      background-color: #0f172a;
+    }
+    
+    /* BRAND COLORS */
+    .bg-brand-blue { background-color: #5170ff !important; }
+    .text-brand-white { color: #ffffff !important; }
+    .text-brand-light { color: #dbeafe !important; } /* blue-100 */
+
+    /* FORCE RED EDGES FOR VISIBILITY AND EXPORT */
+    .react-flow__edge-path {
+      stroke: #ff0000 !important; /* ROUGE VIF */
+      stroke-width: 3.5 !important;
+      stroke-opacity: 1 !important;
+      vector-effect: non-scaling-stroke;
+    }
+    
+    /* FORCE RED ARROWHEADS */
+    .react-flow__arrowhead path {
+      fill: #ff0000 !important;
+      stroke: #ff0000 !important;
+    }
+    
+    /* Ensure the SVG definitions are visible to the capture engine */
+    .react-flow__edges {
+      z-index: 10;
+    }
+
+    /* React Flow Overrides */
+    .dark .react-flow__pane {
+      background-color: transparent;
+    }
+    .dark .react-flow__handle {
+      background: #ffffff;
+      border: 2px solid #5170ff;
+    }
+    .react-flow__handle {
+      width: 10px !important;
+      height: 10px !important;
+      background: #ffffff !important;
+      border: 2px solid #5170ff !important;
+    }
+    .dark .react-flow__controls button {
+      background: #1e293b;
+      color: #f3f4f6;
+      border-bottom: 1px solid #334155;
+    }
+    .dark .react-flow__attribution {
+      background: rgba(0,0,0,0.5);
+      color: #9ca3af;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "html-to-image": "https://esm.sh/html-to-image@^1.11.13",
+    "reactflow": "https://esm.sh/reactflow@^11.11.4"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
